@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+     <script src="https://cdn.tailwindcss.com"></script>
+ 
+     <title>Responsive Navbar Tailwind CSS</title>
+   </head>
+ 
+   <body class="bg-slate-900">
+     <nav
+       class="bg-slate-700 flex text-white items-center justify-between flex-wrap pb-2 px-5"
+     >
+       <!-- Logo -->
+       <div>
+         <span class="font-semibold text-4xl text-green-400">Logo</span>
+       </div>
+       <!-- Toggle button -->
+       <div class="block lg:hidden">
+         <button
+           onclick="toggle_nav()"
+           class="flex flex-col px-3 py-2 border rounded border-gray-800 hover:text-white hover:border-white"
+         >
+           <div class="w-6 h-1 bg-white"></div>
+           <div class="w-6 h-1 bg-white my-1"></div>
+           <div class="w-6 h-1 bg-white"></div>
+         </button>
+       </div>
+ 
+       <!-- Nav menu -->
+       <div
+         class="w-full lg:w-auto block lg:flex lg:items-center lg:inline-block  hidden"
+         id="navbar"
+       >
+         <div class="lg:flex-grow text-2xl text-center space-x-3">
+           <a href="#" class="block lg:inline-block hover:text-green-400 mt-4">
+             Home
+           </a>
+           <a href="#" class="block lg:inline-block hover:text-green-400 mt-4">
+             Blog
+           </a>
+           <a
+             href="#"
+             class="block lg:inline-block hover:text-green-400 mt-4 mb-3z"
+           >
+             About Us
+           </a>
+           <a
+             href="#"
+             class="lg:inline-block hover:text-green-400 mt-6 border rounded border-white hover:border-transparent hover:bg-white px-4"
+           >
+             Login / Sign Up
+           </a>
+         </div>
+       </div>
+     </nav>
+ 
+       <h1 class="text-center m-auto my-10 text-white text-6xl">Hello World!</h1>
+   
+ 
+     <script>
+       var navbar = document.getElementById("navbar");
+ 
+       const toggle_nav = () => {
+         navbar.classList.toggle("hidden");
+       };
+      
+     </script>
+   </body>
+ </html>
+ 
